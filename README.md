@@ -1,6 +1,5 @@
- Project Name
 
-**Author**: Dina Abu zeena
+**Author**: Your Name Goes Here
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
@@ -22,12 +21,12 @@
 
 
 
-Name of feature: city-explorer-api
+Name of feature: ___City Explorer_____________________________
 
-city-explorer-api
+Estimate of time needed to complete: 8_____
 
-Estimate of time needed to complete: all day
-Start time: 2:25
-Finish time: 10:26
+Start time: __2___
 
-Actual time needed to complete: _____
+Finish time: ___10__
+
+Actual time needed to complete: alot_____
