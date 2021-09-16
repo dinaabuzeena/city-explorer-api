@@ -10,30 +10,30 @@ const weatherData = require('./data/weather.json');
 const { request } = require('express');
 const PORT = process.env.PORT;
 
-// app.get('/name', (req, res) => {
-//     let lat = Number(req.query.lat);
-//     let lon = Number(req.query.lon);
-//     let searchQuery = req.query.searchQuery;
+app.get('/weather', (req, res) => {
+    let lat = Number(req.query.lat);
+    let lon = Number(req.query.lon);
+    let searchQuery = req.query.searchQuery;
 
-//     if (lat && lon || searchQuery) {
-//         let result = weatherData.find(item => item.city_name === searchQuery)
-//         if (result) {
-//             let foreCast = result.data.map(item => {
-//                 return {
-//                     date: item.datetime,
-//                     description: item.weather.description
-//                 }
-//             })
-//             res.status(200).json(foreCast);
-//         } else {
-//             res.status(404).send("Not Found")
-//         }
+    if (lat && lon || searchQuery) {
+        let result = weatherData.find(item => item.city_name === searchQuery)
+        if (result) {
+            let foreCast = result.data.map(item => {
+                return {
+                    date: item.datetime,
+                    description: item.weather.description
+                }
+            })
+            res.status(200).json(foreCast);
+        } else {
+            res.status(404).send("Not Found")
+        }
 
-//     } else {
-//         res.status(500).send("please enter correct qurey parameter");
-//     }
+    } else {
+        res.status(500).send("please enter correct qurey parameter");
+    }
 
-// })
+})
 
 app.get('/weather', handelWeather)
 
