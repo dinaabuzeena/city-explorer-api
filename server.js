@@ -51,10 +51,6 @@ async function handelWeather(req, res) {
     res.status(200).json(cleanedData)
 }
 
-app.get('/', (req, res) => {
-    res.send('test');
-})
-
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
 });
