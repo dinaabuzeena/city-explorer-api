@@ -11,6 +11,9 @@ const { request } = require('express');
 const PORT = process.env.PORT;
 const handelWeather=require("./controller/weather.controller");
 const handelWeather=require("./controller/weather.controller");
+const axios=require("axios");
+const Cache=require("./helpers/cache");
+
 
 // app.get('/name', (req, res) => {
 //     let lat = Number(req.query.lat);
