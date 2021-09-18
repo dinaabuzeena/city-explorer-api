@@ -1,5 +1,7 @@
 "use strict";
 
+const axios=require("axios");
+
 const ForeCast = require("../model/weather.model")
 async function handelWeather(req, res) {
     let lat = Number(req.query.lat);

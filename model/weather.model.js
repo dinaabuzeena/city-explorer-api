@@ -1,4 +1,6 @@
 "use strict";
+
+
 class ForeCast {
     constructor(date, description) {
         this.date = date;
