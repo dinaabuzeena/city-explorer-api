@@ -1,12 +1,10 @@
 "use strict";
 
 const axios = require("axios");
-// let cache = new Cache;
-// const Cache = require("../helpers/cache");
-const ListMovie = require("../model/movie.model")
+const ListMovie = require("../model/movie.model");
+
 
 async function handelMovie(req, res) {
-
         let county = req.query.county;
         let url = `https://api.themoviedb.org/3/search/movie?api_key=e338bfa50b9f5e55c7b9fba4b6173e6d&query=${county}&language=en-US`;
         let respons = await axios.get(url);
@@ -16,9 +14,6 @@ async function handelMovie(req, res) {
         })
         res.status(200).json(cleanedData)
     }
-
-
-
 
 
 
