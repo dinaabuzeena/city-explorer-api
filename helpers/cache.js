@@ -1,12 +1,9 @@
-"use srtict";
+"use strict";
 
-
-class Cache {
-    constructor(original_title,overview,img){
-        this,original_title=original_title;
-        this.overview=overview;
-        this.img=img
-
+class Cache{
+    constructor(){
+        this.data=[],
+        this.date=new Date();
     }
 }
 
