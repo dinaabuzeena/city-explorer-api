@@ -38,10 +38,8 @@ const handelMovie=require("./controller/moive.contrlloer");
 
 // })
 
-app.get('/weather',handelWeather);
-
-app.get('/moive',handelMovie)
-
+app.get('/weather',usersControleer);
+app.get('/movies',moviesController);
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
