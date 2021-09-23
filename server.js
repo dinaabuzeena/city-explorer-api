@@ -9,8 +9,10 @@ require('dotenv').config();
 const weatherData = require('./data/weather.json');
 const { request } = require('express');
 const PORT = process.env.PORT;
-const handelWeather=require("./controller/weather.controller");
-const handelMovie=require("./controller/moive.contrlloer");
+// const handelWeather=require("./controller/weather.controller");
+// const handelMovie=require("./controller/moive.contrlloer");
+const moiveController=require("./controller/moive.contrlloer");
+const weatherController=require("./controller/weather.controller")
 
 
 // app.get('/name', (req, res) => {
@@ -38,8 +40,8 @@ const handelMovie=require("./controller/moive.contrlloer");
 
 // })
 
-app.get('/weather',usersControleer);
-app.get('/movies',moviesController);
+app.get('/weather',weatherController);
+app.get('/movies',moiveController);
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)

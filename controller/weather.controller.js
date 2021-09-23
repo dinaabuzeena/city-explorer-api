@@ -5,7 +5,7 @@ const axios =require("axios");
 const Cache = require("../helpers/cache");
 let cache = new Cache();
 
-let usersControleer = async (req,res)=>{
+let handelWeather = async (req,res)=>{
     let currentDate=new Date()
     let lat=req.query.lat;
     let lon=req.query.lon;
@@ -31,4 +31,4 @@ let usersControleer = async (req,res)=>{
 
 
 
-module.exports=usersControleer;
+module.exports=handelWeather;

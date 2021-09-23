@@ -5,12 +5,12 @@ const axios =require("axios");
 const Cache = require("../helpers/cache");
 let cacheMovies = new Cache();
 
-let moviesController = async (req, res) => {
+let handelMovie = async (req, res) => {
     let currentDate=new Date()
     let city = req.query.query;
-if (cacheMovies.data.length>0 && cacheMovies.date.getDate()===currentDate.getDate()) {
-        res.json(cacheMovies)
-    }else{
+// if (cacheMovies.data.length>0 && cacheMovies.date.getDate()===currentDate.getDate()) {
+//         res.json(cacheMovies)
+//     }else{
     let url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&query=${city}`;
     let axiosRes = await axios.get(url).catch((e) => {
         console.log(e)
@@ -25,7 +25,7 @@ if (cacheMovies.data.length>0 && cacheMovies.date.getDate()===currentDate.getDat
     cacheMovies.data = movieData;
     res.json(cacheMovies.data)
 }
-}
 
 
-module.exports = moviesController;
+
+module.exports = handelMovie;
