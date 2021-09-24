@@ -42,6 +42,7 @@ const weatherController=require("./controller/weather.controller")
 
 app.get('/weather',weatherController);
 app.get('/movies',moiveController);
+// console.log(weather)
 
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`)
